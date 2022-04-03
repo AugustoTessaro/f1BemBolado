@@ -35,7 +35,18 @@ session_start();
         </div>
     </nav>
 
-
+                <?php
+                    if(isset($_SESSION['usuario_nao_cadastrado'])):
+                ?>
+                   <div class="container text-center">
+                       <div class="alert alert-danger">
+                            <p>Esse usuário ainda não existe! Cadastre seu usuário para efetuar o login.</p>
+                        </div>
+                    </div>
+                <?php
+                endif;
+                unset($_SESSION['usuario_nao_cadastrado']);
+                ?>
 
     <div class="col-2 m-auto justify-content-center">
         <form method="POST" action="validarCadastro.php">

@@ -38,22 +38,39 @@ session_start();
     </nav>
 
     
-        <?php
-                    if($_SESSION['usuario_existe']):
+
+    <?php
+                    if(isset($_SESSION['senha_incorreta'])):
                 ?>
-                   <div>
-                        <p>Esse email já está cadastrado! Efetue o login</p>
-                </div>
+                        <div class=" container text-center">
+                            <div class="alert alert-danger">
+                                <p>senha incorreta!</p>
+                            </div>  
+                        </div>
+                <?php
+                endif;
+                unset($_SESSION['senha_incorreta']);
+                ?>
+        <?php
+                    if(isset($_SESSION['usuario_existe'])):
+                ?>
+                        <div class=" container text-center">
+                            <div class="alert alert-danger">
+                                <p>Esse email já está cadastrado! Efetue o login</p>
+                            </div>  
+                        </div>
                 <?php
                 endif;
                 unset($_SESSION['usuario_existe']);
                 ?>
 
                 <?php
-                        if($_SESSION['status_cadastro'] == true):
+                        if(isset($_SESSION['status_cadastro'])):
                     ?>
-                        <div>
+                        <div class=" container text-center">
+                            <div class="alert alert-danger">
                             <p>usuario cadastrado com sucesso faca o login</p>
+                            </div>
                         </div>
                     <?php
                     endif;
