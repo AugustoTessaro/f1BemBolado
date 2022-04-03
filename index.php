@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <title> F1 bem bolado </title>
 </head>
@@ -24,8 +24,8 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
             <a class="nav-item nav-link" href="login.php">Login</a>
-            <a class="nav-item nav-link" href="#">Corridas</a>
-            <a class="nav-item nav-link" href="sucess.php">Perfil</a>
+            <a class="nav-item nav-link" href="corridas.php">Corridas</a>
+            <a class="nav-item nav-link" href="perfil.php">Perfil</a>
             <a class="nav-item nav-link disabled" href="#">Apostar</a>
             </div>
         </div>
