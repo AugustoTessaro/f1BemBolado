@@ -25,8 +25,6 @@
             <div class="navbar-nav">
             <a class="nav-item nav-link" href="login.php">Login</a>
             <a class="nav-item nav-link" href="corridas.php">Corridas</a>
-            <a class="nav-item nav-link" href="perfil.php">Perfil</a>
-            <a class="nav-item nav-link disabled" href="#">Apostar</a>
             </div>
         </div>
         </nav>

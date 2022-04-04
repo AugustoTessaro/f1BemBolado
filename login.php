@@ -1,7 +1,6 @@
 <?php
 include('connection.php');
 session_start();
-
 ?>
 
 <!DOCTYPE html>
@@ -31,20 +30,30 @@ session_start();
             <div class="navbar-nav">
                 <a class="nav-item nav-link" href="login.php">Login</a>
                 <a class="nav-item nav-link" href="corridas.php">Corridas</a>
-                <a class="nav-item nav-link" href="perfil.php">Perfil</a>
-                <a class="nav-item nav-link disabled" href="#">Apostar</a>
             </div>
         </div>
     </nav>
 
-    
+    <?php
+                    if(isset($_SESSION['usuario_nao_logado'])):
+                ?>
+                        <div class=" container text-center">
+                            <div class="alert alert-danger">
+                                <p>Faça o login para ver o perfil!</p>
+                            </div>  
+                        </div>
+                <?php
+                endif;
+                unset($_SESSION['usuario_nao_logado']);
+                ?>
+
 
     <?php
                     if(isset($_SESSION['senha_incorreta'])):
                 ?>
                         <div class=" container text-center">
                             <div class="alert alert-danger">
-                                <p>senha incorreta!</p>
+                                <p>Senha incorreta!</p>
                             </div>  
                         </div>
                 <?php
@@ -70,7 +79,7 @@ session_start();
                     ?>
                         <div class=" container text-center">
                             <div class="alert alert-danger">
-                            <p>usuario cadastrado com sucesso faca o login</p>
+                            <p>Usuário cadastrado com sucesso faca o login</p>
                             </div>
                         </div>
                     <?php

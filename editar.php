@@ -34,47 +34,34 @@ session_start();
         </div>
     </nav>
 
-                <?php
-                    if(isset($_SESSION['usuario_nao_cadastrado'])):
-                ?>
-                   <div class="container text-center">
-                       <div class="alert alert-danger">
-                            <p>Esse usuário ainda não existe! Cadastre seu usuário para efetuar o login.</p>
-                        </div>
-                    </div>
-                <?php
-                endif;
-                unset($_SESSION['usuario_nao_cadastrado']);
-                ?>
-
     <div class="col-2 m-auto justify-content-center">
-        <form method="POST" action="validarCadastro.php">
+        <form method="POST" action="att.php">
             <div class="form-group">
                 <label for="nome">Nome</label>
-                <input type="nome" name="nome" class="form-control" id="nome" aria-describedby="nomeHelp"
+                <input type="nome" value="<?php echo $_SESSION['nome'] ?>" name="nome" class="form-control" id="nome" aria-describedby="nomeHelp"
                     placeholder="Seu nome" required>
             </div>
             <div class="form-group">
                 <label for="email">Endereço de email</label>
-                <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp"
+                <input type="email" value="<?php echo $_SESSION['email'] ?>" name="email" class="form-control" id="email" aria-describedby="emailHelp"
                     placeholder="Seu email" required>
             </div>
             <div class="form-group">
                 <label for="idade">Idade</label>
-                <input type="number" name="idade" class="form-control" id="idade" aria-describedby="idadeHelp"
+                <input type="number" value="<?php echo $_SESSION['idade'] ?>" name="idade" class="form-control" id="idade" aria-describedby="idadeHelp"
                     placeholder="Sua idade" required>
             </div>
             <div class="form-group">
                 <label for="CPF">CPF</label>
-                <input type="number" name="CPF" class="form-control" id="CPF" aria-describedby="CPFHelp"
+                <input type="number" value="<?php echo $_SESSION['CPF'] ?>" name="CPF" class="form-control" id="CPF" aria-describedby="CPFHelp"
                     placeholder="Seu CPF" required>
             </div>
             <div class="form-group">
                 <label for="senha">Senha</label>
-                <input type="password" name="senha" class="form-control" id="senha" placeholder="Senha" required>
+                <input type="password" value="<?php echo $_SESSION['senha'] ?>" name="senha" class="form-control" id="senha" placeholder="Senha" required>
             </div>
             <div class="text-center">
-                <button type="submit" name="enviar" class="btn btn-dark">Cadastrar</button>
+                <button type="submit" name="enviar" class="btn btn-dark">Atualizar</button>
             </div>
         </form>
 
